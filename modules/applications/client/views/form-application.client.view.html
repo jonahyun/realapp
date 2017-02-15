@@ -1,24 +1,122 @@
+
 <section>
   <div class="page-header">
     <h1>{{vm.application._id ? 'Edit Application' : 'New Application'}}</h1>
   </div>
   <div class="col-md-12">
     <form name="vm.form.applicationForm" class="form-horizontal" ng-submit="vm.save(vm.form.applicationForm.$valid)" novalidate>
-      <fieldset>
-        <div class="form-group" show-errors>
-          <label class="control-label" for="name">Name</label>
-          <input name="name" type="text" ng-model="vm.application.name" id="name" class="form-control" placeholder="Name" required>
-          <div ng-messages="vm.form.applicationForm.name.$error" role="alert">
-            <p class="help-block error-text" ng-message="required">Application name is required.</p>
+      <article>
+        <h2>Your Information</h2>
+        <p>You will be designated as the primary applicant and resident that will coordinate rental agreement.</p>
+        <fieldset>
+          <div class="row">
+
+            <div class="form-group col-md-4" show-errors>
+              <label>First Name</label>
+              <input name="name" type="text" ng-model="vm.application.firstName" id="firstName" class="form-control" placeholder="" required>
+              <div ng-messages="vm.form.applicationForm.name.$error" role="alert">
+                <p class="help-block error-text" ng-message="required">First name is required.</p>
+              </div>
+            </div>
+          
+            <div class="form-group col-md-4" show-errors>
+              <label>Last Name</label>
+              <input name="name" type="text" ng-model="vm.application.lastName" id="lastName" class="form-control" placeholder="" required>
+              <div ng-messages="vm.form.applicationForm.name.$error" role="alert">
+                <p class="help-block error-text" ng-message="required">Last name is required.</p>
+              </div>
+            </div>
+       
+            <div class="form-group col-md-4" show-errors>
+              <label>Phone</label>
+              <input name="name" type="text" ng-model="vm.application.phoneNumber" id="phoneNumber" class="form-control" placeholder="ex. 222-333-5555" required>
+              <div ng-messages="vm.form.applicationForm.name.$error" role="alert">
+                <p class="help-block error-text" ng-message="required">Phone Number is required.</p>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="form-group">
-          <button type="submit" class="btn btn-default">{{vm.application._id ? 'Update' : 'Create'}}</button>
-        </div>
-        <div ng-show="vm.error" class="text-danger">
-          <strong ng-bind="vm.error"></strong>
-        </div>
-      </fieldset>
+
+          <div class="row">
+              <div class="form-group col-md-4" show-errors>
+                <label>Email</label>
+                <input name="name" type="text" ng-model="vm.application.email" id="email" class="form-control" placeholder="" required>
+                <div ng-messages="vm.form.applicationForm.name.$error" role="alert">
+                  <p class="help-block error-text" ng-message="required">Email is required.</p>
+                </div>
+              </div>
+
+              <div class="form-group col-md-4" show-errors>
+                <label>Birthday</label>
+                <input name="name" type="text" ng-model="vm.application.birthday" id="birthday" class="form-control" placeholder="ex. 11/22/1984" required>
+                <div ng-messages="vm.form.applicationForm.name.$error" role="alert">
+                  <p class="help-block error-text" ng-message="required">Birthday is required.</p>
+                </div>
+              </div> 
+
+              <div class="form-group col-md-4" show-errors>
+                <label>Gender</label>
+                <select name="name" ng-model="vm.application.gender" id="gender" class="form-control" required>
+                  <option >Male</option>
+                  <option >Female</option>
+                </select>
+
+                <div ng-messages="vm.form.applicationForm.name.$error" role="alert">
+                  <p class="help-block error-text" ng-message="required">Gender is required.</p>
+                </div>
+              </div>
+         
+          </div>
+
+
+          <div class="row">
+              <div class="form-group col-md-4" show-errors>
+                <label>Social Security Number</label>
+                <input name="name" type="text" ng-model="vm.application.ssn" id="ssn" class="form-control" placeholder="ex. 111-22-3333" required>
+                <div ng-messages="vm.form.applicationForm.name.$error" role="alert">
+                  <p class="help-block error-text" ng-message="required">SSN is required.</p>
+                </div>
+              </div>
+
+              <div class="form-group col-md-4" show-errors>
+                <label>Driver's License or State ID</label>
+                <input name="name" type="text" ng-model="vm.application.validId" id="validId" class="form-control" placeholder="ex. OH12345678" required>
+                <div ng-messages="vm.form.applicationForm.name.$error" role="alert">
+                  <p class="help-block error-text" ng-message="required">Valid ID is required.</p>
+                </div>
+              </div>
+
+              <div class="form-group col-md-4" show-errors>
+                <label>ID Issued State</label>
+                <input name="name" type="text" ng-model="vm.application.validIdState" id="validIdState" class="form-control" placeholder="Last Name" required>
+                <div ng-messages="vm.form.applicationForm.name.$error" role="alert">
+                  <p class="help-block error-text" ng-message="required">Last name is required.</p>
+                </div>
+              </div>
+            </div>
+          
+        </fieldset>
+        <fieldset>
+        <h2>Resident</h2>
+
+            <div class="form-group col-md-4" show-errors>
+              <label>First Name</label>
+              <input name="name" type="text" ng-model="vm.application.resident[0].firstName" id="rfirstName" class="form-control" placeholder="" required>
+              <div ng-messages="vm.form.applicationForm.name.$error" role="alert">
+                <p class="help-block error-text" ng-message="required">First name is required.</p>
+              </div>
+            </div>
+
+        </fieldset>
+
+
+
+          <div class="form-group">
+            <button type="submit" class="btn btn-default">{{vm.application._id ? 'Update' : 'Create'}}</button>
+          </div>
+          <div ng-show="vm.error" class="text-danger">
+            <strong ng-bind="vm.error"></strong>
+          </div>
+      
     </form>
   </div>
 </section>

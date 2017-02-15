@@ -11,6 +11,7 @@
   function GroceriesController ($scope, $state, $window, Authentication, grocery) {
     var vm = this;
 
+    vm.groceryList = [];
     vm.authentication = Authentication;
     vm.grocery = grocery;
     vm.error = null;
