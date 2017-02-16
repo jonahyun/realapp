@@ -1,0 +1,22 @@
+.navbar-inverse {background-color: #2881E9; background-image: none}
+.navbar-inverse a {color:#fff !important;text-shadow: none !important;}
+.bar {background-color: #eee;height:100px;}
+header {border:none !important;height:100px;}
+section.content {margin:0 auto;padding:0;}
+section.container {margin: 0 auto;padding:0;}
+.row {margin:0;}
+.form-group {margin-right:0px !important;}
+.page-header {padding:0 15px;}
+
+header {border-radius: 0 !important;}
+
+h2 {font-size:22px;color:#2881E9;padding:0;margin:0;}
+p {color:#9b9b9b;font-size:14px;}
+label {font-size:13px !important;font-weight: normal;color:#4a4a4a;}
+.half {width:50%;}
+.container {}
+
+fieldset {border-bottom:1px dotted #999;padding:15px;}
+
+input, select {border-radius:0 !important;padding: 2px 8px !important;background-color: #f6f6f6 !important;font-size:16px !important;color:#000 !important;}
+input:active, input:hover, select:active, select:hover {background-color: #FAF4A6 !important;border:2px solid #000;}

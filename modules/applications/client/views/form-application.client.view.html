@@ -1,32 +1,32 @@
-
+<div class="bar"></div>
 <section>
   <div class="page-header">
-    <h1>{{vm.application._id ? 'Edit Application' : 'New Application'}}</h1>
+    <h2>{{vm.application._id ? 'Edit Application' : 'Personal Info'}}</h2>
   </div>
   <div class="col-md-12">
     <form name="vm.form.applicationForm" class="form-horizontal" ng-submit="vm.save(vm.form.applicationForm.$valid)" novalidate>
       <fieldset>
-        <h2>Your Information</h2>
+        <h2>Your Login Info</h2>
         <p>You will be designated as the primary applicant and resident that will coordinate rental agreement.</p>
         <div class="row">
           <div class="form-group col-md-4" show-errors>
             <label>First Name</label>
-            <input name="name" type="text" ng-model="vm.application.firstName" id="firstName" class="form-control" placeholder="" required>
-            <div ng-messages="vm.form.applicationForm.name.$error" role="alert">
+            <input name="firstName" type="text" ng-model="vm.application.firstName" id="firstName" class="form-control" placeholder="" required>
+            <div ng-messages="vm.form.applicationForm.firstName.$error" role="alert">
               <p class="help-block error-text" ng-message="required">First name is required.</p>
             </div>
           </div>
           <div class="form-group col-md-4" show-errors>
             <label>Last Name</label>
-            <input name="name" type="text" ng-model="vm.application.lastName" id="lastName" class="form-control" placeholder="" required>
-            <div ng-messages="vm.form.applicationForm.name.$error" role="alert">
+            <input name="lastName" type="text" ng-model="vm.application.lastName" id="lastName" class="form-control" placeholder="" required>
+            <div ng-messages="vm.form.applicationForm.lastName.$error" role="alert">
               <p class="help-block error-text" ng-message="required">Last name is required.</p>
             </div>
           </div>
           <div class="form-group col-md-4" show-errors>
             <label>Phone</label>
-            <input name="name" type="text" ng-model="vm.application.phoneNumber" id="phoneNumber" class="form-control" placeholder="ex. 222-333-5555" required>
-            <div ng-messages="vm.form.applicationForm.name.$error" role="alert">
+            <input name="phoneNumber" type="text" ng-model="vm.application.phoneNumber" id="phoneNumber" class="form-control" placeholder="ex. 222-333-5555" required>
+            <div ng-messages="vm.form.applicationForm.phoneNumber.$error" role="alert">
               <p class="help-block error-text" ng-message="required">Phone Number is required.</p>
             </div>
           </div>
@@ -34,25 +34,25 @@
         <div class="row">
           <div class="form-group col-md-4" show-errors>
             <label>Email</label>
-            <input name="name" type="text" ng-model="vm.application.email" id="email" class="form-control" placeholder="" required>
-            <div ng-messages="vm.form.applicationForm.name.$error" role="alert">
+            <input name="email" type="text" ng-model="vm.application.email" id="email" class="form-control" placeholder="" required>
+            <div ng-messages="vm.form.applicationForm.email.$error" role="alert">
               <p class="help-block error-text" ng-message="required">Email is required.</p>
             </div>
           </div>
           <div class="form-group col-md-4" show-errors>
             <label>Birthday</label>
-            <input name="name" type="text" ng-model="vm.application.birthday" id="birthday" class="form-control" placeholder="ex. 11/22/1984" required>
-            <div ng-messages="vm.form.applicationForm.name.$error" role="alert">
+            <input name="birthday" type="text" ng-model="vm.application.birthday" id="birthday" class="form-control" placeholder="ex. 11/22/1984" required>
+            <div ng-messages="vm.form.applicationForm.birthday.$error" role="alert">
               <p class="help-block error-text" ng-message="required">Birthday is required.</p>
             </div>
           </div>
           <div class="form-group col-md-4" show-errors>
             <label>Gender</label>
-            <select name="name" ng-model="vm.application.gender" id="gender" class="form-control" required>
+            <select name="gender" ng-model="vm.application.gender" id="gender" class="form-control half" required>
               <option >Male</option>
               <option >Female</option>
             </select>
-            <div ng-messages="vm.form.applicationForm.name.$error" role="alert">
+            <div ng-messages="vm.form.applicationForm.gender.$error" role="alert">
               <p class="help-block error-text" ng-message="required">Gender is required.</p>
             </div>
           </div>
@@ -60,22 +60,22 @@
         <div class="row">
           <div class="form-group col-md-4" show-errors>
             <label>Social Security Number</label>
-            <input name="name" type="text" ng-model="vm.application.ssn" id="ssn" class="form-control" placeholder="ex. 111-22-3333" required>
-            <div ng-messages="vm.form.applicationForm.name.$error" role="alert">
+            <input name="ssn" type="text" ng-model="vm.application.ssn" id="ssn" class="form-control" placeholder="" required>
+            <div ng-messages="vm.form.applicationForm.ssn.$error" role="alert">
               <p class="help-block error-text" ng-message="required">SSN is required.</p>
             </div>
           </div>
           <div class="form-group col-md-4" show-errors>
             <label>Driver's License or State ID</label>
-            <input name="name" type="text" ng-model="vm.application.validId" id="validId" class="form-control" placeholder="ex. OH12345678" required>
-            <div ng-messages="vm.form.applicationForm.name.$error" role="alert">
+            <input name="validId" type="text" ng-model="vm.application.validId" id="validId" class="form-control" placeholder="ex. OH12345678" required>
+            <div ng-messages="vm.form.applicationForm.validId.$error" role="alert">
               <p class="help-block error-text" ng-message="required">Valid ID is required.</p>
             </div>
           </div>
           <div class="form-group col-md-4" show-errors>
             <label>ID Issued State</label>
-            <input name="name" type="text" ng-model="vm.application.validIdState" id="validIdState" class="form-control" placeholder="Last Name" required>
-            <div ng-messages="vm.form.applicationForm.name.$error" role="alert">
+            <input name="validIdState" type="text" ng-model="vm.application.validIdState" id="validIdState" class="form-control" placeholder="" required>
+            <div ng-messages="vm.form.applicationForm.validIdState.$error" role="alert">
               <p class="help-block error-text" ng-message="required">Last name is required.</p>
             </div>
           </div>
@@ -87,22 +87,22 @@
         <div class="row">
           <div class="form-group col-md-4" show-errors>
             <label>First Name</label>
-            <input name="name" type="text" ng-model="vm.application.residents.firstName" id="rfirstName" class="form-control" placeholder="" required>
-            <div ng-messages="vm.form.applicationForm.name.$error" role="alert">
+            <input name="rfirstName" type="text" ng-model="vm.application.residents.firstName" id="rfirstName" class="form-control" placeholder="" required>
+            <div ng-messages="vm.form.applicationForm.rfirstName.$error" role="alert">
               <p class="help-block error-text" ng-message="required">First name is required.</p>
             </div>
           </div>
           <div class="form-group col-md-4" show-errors>
             <label>Last Name</label>
-            <input name="name" type="text" ng-model="vm.application.residents[0].lastName" id="rlastName" class="form-control" placeholder="" required>
-            <div ng-messages="vm.form.applicationForm.name.$error" role="alert">
+            <input name="rlastName" type="text" ng-model="vm.application.residents[0].lastName" id="rlastName" class="form-control" placeholder="" required>
+            <div ng-messages="vm.form.applicationForm.rlastName.$error" role="alert">
               <p class="help-block error-text" ng-message="required">Last name is required.</p>
             </div>
           </div>
           <div class="form-group col-md-4" show-errors>
             <label>Phone</label>
-            <input name="name" type="text" ng-model="vm.application.residents[0].phoneNumber" id="rphoneNumber" class="form-control" placeholder="ex. 222-333-5555" required>
-            <div ng-messages="vm.form.applicationForm.name.$error" role="alert">
+            <input name="rphoneNumber" type="text" ng-model="vm.application.residents[0].phoneNumber" id="rphoneNumber" class="form-control" placeholder="ex. 222-333-5555" required>
+            <div ng-messages="vm.form.applicationForm.rphoneNumber.$error" role="alert">
               <p class="help-block error-text" ng-message="required">Phone Number is required.</p>
             </div>
           </div>
@@ -110,25 +110,25 @@
         <div class="row">
           <div class="form-group col-md-4" show-errors>
             <label>Email</label>
-            <input name="name" type="text" ng-model="vm.application.residents[0].email" id="remail" class="form-control" placeholder="" required>
-            <div ng-messages="vm.form.applicationForm.name.$error" role="alert">
+            <input name="remail" type="text" ng-model="vm.application.residents[0].email" id="remail" class="form-control" placeholder="" required>
+            <div ng-messages="vm.form.applicationForm.remail.$error" role="alert">
               <p class="help-block error-text" ng-message="required">Email is required.</p>
             </div>
           </div>
           <div class="form-group col-md-4" show-errors>
             <label>Birthday</label>
-            <input name="name" type="text" ng-model="vm.application.residents[0].birthday" id="rbirthday" class="form-control" placeholder="ex. 11/22/1984" required>
-            <div ng-messages="vm.form.applicationForm.name.$error" role="alert">
+            <input name="rbirthday" type="text" ng-model="vm.application.residents[0].birthday" id="rbirthday" class="form-control" placeholder="ex. 11/22/1984" required>
+            <div ng-messages="vm.form.applicationForm.rbirthday.$error" role="alert">
               <p class="help-block error-text" ng-message="required">Birthday is required.</p>
             </div>
           </div>
           <div class="form-group col-md-4" show-errors>
             <label>Gender</label>
-            <select name="name" ng-model="vm.application.residents[0].gender" id="rgender" class="form-control" required>
+            <select name="rgender" ng-model="vm.application.residents[0].gender" id="rgender" class="form-control half" required>
               <option >Male</option>
               <option >Female</option>
             </select>
-            <div ng-messages="vm.form.applicationForm.name.$error" role="alert">
+            <div ng-messages="vm.form.applicationForm.rgender.$error" role="alert">
               <p class="help-block error-text" ng-message="required">Gender is required.</p>
             </div>
           </div>
@@ -136,22 +136,22 @@
         <div class="row">
           <div class="form-group col-md-4" show-errors>
             <label>Social Security Number</label>
-            <input name="name" type="text" ng-model="vm.application.residents[0].ssn" id="rssn" class="form-control" placeholder="ex. 111-22-3333" required>
-            <div ng-messages="vm.form.applicationForm.name.$error" role="alert">
+            <input name="rssn" type="text" ng-model="vm.application.residents[0].ssn" id="rssn" class="form-control" placeholder="ex. 111-22-3333" required>
+            <div ng-messages="vm.form.applicationForm.rssn.$error" role="alert">
               <p class="help-block error-text" ng-message="required">SSN is required.</p>
             </div>
           </div>
           <div class="form-group col-md-4" show-errors>
             <label>Driver's License or State ID</label>
-            <input name="name" type="text" ng-model="vm.application.residents[0].validId" id="rvalidId" class="form-control" placeholder="ex. OH12345678" required>
-            <div ng-messages="vm.form.applicationForm.name.$error" role="alert">
+            <input name="rvalidId" type="text" ng-model="vm.application.residents[0].validId" id="rvalidId" class="form-control" placeholder="ex. OH12345678" required>
+            <div ng-messages="vm.form.applicationForm.rvalidId.$error" role="alert">
               <p class="help-block error-text" ng-message="required">Valid ID is required.</p>
             </div>
           </div>
           <div class="form-group col-md-4" show-errors>
             <label>ID Issued State</label>
-            <input name="name" type="text" ng-model="vm.application.residents[0].validIdState" id="rvalidIdState" class="form-control" placeholder="Last Name" required>
-            <div ng-messages="vm.form.applicationForm.name.$error" role="alert">
+            <input name="rvalidIdState" type="text" ng-model="vm.application.residents[0].validIdState" id="rvalidIdState" class="form-control" placeholder="Last Name" required>
+            <div ng-messages="vm.form.applicationForm.rvalidIdState.$error" role="alert">
               <p class="help-block error-text" ng-message="required">Last name is required.</p>
             </div>
           </div>
@@ -163,29 +163,29 @@
         <div class="row">
           <div class="form-group col-md-3" show-errors>
             <label>First Name</label>
-            <input name="name" type="text" ng-model="vm.application.minors[0].firstName" id="mfirstName" class="form-control" placeholder="" required>
-            <div ng-messages="vm.form.applicationForm.name.$error" role="alert">
+            <input name="mfirstName" type="text" ng-model="vm.application.minors[0].firstName" id="mfirstName" class="form-control" placeholder="" required>
+            <div ng-messages="vm.form.applicationForm.mfirstName.$error" role="alert">
               <p class="help-block error-text" ng-message="required">First name is required.</p>
             </div>
           </div>
           <div class="form-group col-md-3" show-errors>
             <label>Last Name</label>
-            <input name="name" type="text" ng-model="vm.application.minors[0].lastName" id="mlastName" class="form-control" placeholder="" required>
-            <div ng-messages="vm.form.applicationForm.name.$error" role="alert">
+            <input name="mlastName" type="text" ng-model="vm.application.minors[0].lastName" id="mlastName" class="form-control" placeholder="" required>
+            <div ng-messages="vm.form.applicationForm.mlastName.$error" role="alert">
               <p class="help-block error-text" ng-message="required">Last name is required.</p>
             </div>
           </div>
           <div class="form-group col-md-3" show-errors>
             <label>Age</label>
-            <input name="name" type="text" ng-model="vm.application.minors[0].age" id="age" class="form-control" placeholder="ex. 222-333-5555" required>
-            <div ng-messages="vm.form.applicationForm.name.$error" role="alert">
+            <input name="mage" type="text" ng-model="vm.application.minors[0].age" id="age" class="form-control" placeholder="ex. 222-333-5555" required>
+            <div ng-messages="vm.form.applicationForm.mage.$error" role="alert">
               <p class="help-block error-text" ng-message="required">Age is required.</p>
             </div>
           </div>
           <div class="form-group col-md-3" show-errors>
             <label>Relationship</label>
-            <input name="name" type="text" ng-model="vm.application.minors[0].relationship" id="mrelationship" class="form-control" required>
-            <div ng-messages="vm.form.applicationForm.name.$error" role="alert">
+            <input name="mrelationship" type="text" ng-model="vm.application.minors[0].relationship" id="mrelationship" class="form-control" required>
+            <div ng-messages="vm.form.applicationForm.mrelationship.$error" role="alert">
               <p class="help-block error-text" ng-message="required">Relationship is required.</p>
             </div>
           </div>
@@ -197,29 +197,29 @@
         <div class="row">
           <div class="form-group col-md-3" show-errors>
             <label>Pet Type</label>
-            <input name="name" type="text" ng-model="vm.application.pets[0].petType" id="petType" class="form-control" placeholder="" required>
-            <div ng-messages="vm.form.applicationForm.name.$error" role="alert">
+            <input name="petType" type="text" ng-model="vm.application.pets[0].petType" id="petType" class="form-control" placeholder="" required>
+            <div ng-messages="vm.form.applicationForm.petType.$error" role="alert">
               <p class="help-block error-text" ng-message="required">Pet type is required.</p>
             </div>
           </div>
           <div class="form-group col-md-3" show-errors>
             <label>Breed</label>
-            <input name="name" type="text" ng-model="vm.application.pets[0].petBreed" id="petBreed" class="form-control" placeholder="" required>
-            <div ng-messages="vm.form.applicationForm.name.$error" role="alert">
+            <input name="petBreed" type="text" ng-model="vm.application.pets[0].petBreed" id="petBreed" class="form-control" placeholder="" required>
+            <div ng-messages="vm.form.applicationForm.petBreed.$error" role="alert">
               <p class="help-block error-text" ng-message="required">Breed is required.</p>
             </div>
           </div>
           <div class="form-group col-md-3" show-errors>
             <label>Weight</label>
-            <input name="name" type="text" ng-model="vm.application.pets[0].weight" id="petWeight" class="form-control" placeholder="ex. 222-333-5555" required>
-            <div ng-messages="vm.form.applicationForm.name.$error" role="alert">
+            <input name="petWeight" type="text" ng-model="vm.application.pets[0].weight" id="petWeight" class="form-control" placeholder="ex. 222-333-5555" required>
+            <div ng-messages="vm.form.applicationForm.petWeight.$error" role="alert">
               <p class="help-block error-text" ng-message="required">Weight required.</p>
             </div>
           </div>
           <div class="form-group col-md-3" show-errors>
             <label>Age</label>
-            <input name="name" type="text" ng-model="vm.application.pets[0].petAge" id="petAge" class="form-control" required>
-            <div ng-messages="vm.form.applicationForm.name.$error" role="alert">
+            <input name="petAge" type="text" ng-model="vm.application.pets[0].petAge" id="petAge" class="form-control" required>
+            <div ng-messages="vm.form.applicationForm.petAge.$error" role="alert">
               <p class="help-block error-text" ng-message="required">Age is required.</p>
             </div>
           </div>

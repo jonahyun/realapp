@@ -33,10 +33,15 @@
 
   <!-- Application CSS Files -->
   {% for cssFile in cssFiles %}<link rel="stylesheet" href="{{cssFile}}">{% endfor %}
+  <link rel="stylesheet" href="assets/css/main.css">
 </head>
 
 <body class="ng-cloak">
-  <header ng-include="'/modules/core/client/views/header.client.view.html'" class="navbar navbar-fixed-top navbar-inverse"></header>
+
+
+
+
+  <header ng-include="'/modules/core/client/views/header.client.view.html'" class="navbar navbar-inverse"></header>
   <section class="content">
     <section class="container">
       {% block content %}{% endblock %}
@@ -58,6 +63,7 @@
   <!--Livereload script rendered -->
   <script type="text/javascript" src="{{host}}:35729/livereload.js"></script>
   {% endif %}
+
 </body>
 
 </html>
